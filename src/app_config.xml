@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE app_config SYSTEM "http://com.huan.hhp">
+<app_config>
+    <persistence-resources>
+        <resource name="project" value="http://192.168.1.102:8080/testhhp" />
+    </persistence-resources>
+    <resources>
+        <resource name="def-application" value="com.huan.hhp.PluginApplication" />
+        <resource name="def-activity" value="com.huan.hhp.SimplePluginActivity" />
+    </resources>
+    <plugin-list>
+        <plugin id="app-1" name="app-1" project="{project}" file="{?}">
+            <application class="{def-application}">
+                <activity name="main" class="{def-activity}" layout="/main.xml" />
+            </application>
+        </plugin>
+    </plugin-list>
+    <clear ids=""></clear>
+</app_config>
